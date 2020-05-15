@@ -2,7 +2,7 @@ import React from "react";
 
 function App() {
   // creating a name variable
-  let name = "Soumyadeep";
+  let name = "Chris";
 
   // creating a date variable
   let curDate = new Date();
@@ -31,14 +31,13 @@ function App() {
     greetings = "Good Night";
     cssstyle.color = "black";
   }
-
   return (
     <div className="container">
       <h2 className="clock">
         Current Time is {curDate}:{curTime}
       </h2>
       <h1>
-        <span style={cssstyle}> {greetings}, </span> &nbsp; {name}
+        <span style={cssstyle}> {greetings}, </span> {name}
       </h1>
     </div>
   );

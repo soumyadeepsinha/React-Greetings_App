@@ -5,4 +5,4 @@ import './index.css';
 
 ReactDOM.render(
   <App />,
-  document.getElementById('new root'))
+  document.getElementById('newroot'))
