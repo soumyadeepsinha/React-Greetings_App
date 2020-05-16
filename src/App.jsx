@@ -12,9 +12,9 @@ function App() {
   curMin = curMin.getMinutes();
 
   let AmOrPm = curHours >= 12 ? 'pm' : 'am';
-  let CurTime = (curHours % 12) || 12;
+  curHours = (curHours % 12) || 12;
 
-  let finalTime = "Time - " + CurTime + ":" + curMin + " " + AmOrPm;
+  let finalTime = "Time - " + curHours + ":" + curMin + " " + AmOrPm;
 
   // creating a greetigs variable
   let greetings = {};
@@ -22,13 +22,13 @@ function App() {
   // creating a inline-css variable
   const cssstyle = {};
 
-  if (CurTime >= 4 && CurTime <= 11 && curMin <= 59 && AmOrPm === 'am') {
+  if (curHours >= 4 && curHours <= 11 && curMin <= 59 && AmOrPm === 'am') {
     greetings = "Good Morning";
     cssstyle.color = "green";
-  } else if (CurTime >= 12 && CurTime <= 5 && curMin <= 59 && AmOrPm === 'pm') {
+  } else if (curHours >= 12 && curHours <= 5 && curMin <= 59 && AmOrPm === 'pm') {
     greetings = "Good Afternoon";
     cssstyle.color = "orange";
-  } else if (CurTime >= 6 && CurTime <= 7 && curMin <= 59 && AmOrPm === 'pm') {
+  } else if (curHours >= 6 && curHours <= 7 && curMin <= 59 && AmOrPm === 'pm') {
     greetings = "Good Evening";
     cssstyle.color = "white";
   } else {
