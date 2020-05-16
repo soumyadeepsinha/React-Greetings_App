@@ -1,4 +1,4 @@
-![screenshot]('images/MomentumProject.jpg')
+![screenshot](images/MomentumProject.jpg)
 
 This project was is created for test some functions & skills;
 
