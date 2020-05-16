@@ -37,10 +37,6 @@ function App() {
   }
   return (
     <>
-      <div className="search">
-        <div className="gcse-searchbox-only" data-resultsUrl="https://googlecustomsearch.appspot.com/elementv2/two-page_results_elements_v2.html?query=test"></div>
-        <script async src="https://cse.google.com/cse.js?cx=000888210889775888983:pqb3ch1ewhg"></script>
-      </div>
       <div className="container">
         <h1 className="clock">
           {finalTime}
