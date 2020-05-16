@@ -19,16 +19,17 @@ body {
 }
 
 .clock {
-  font-size: 48px;
+  font-size: 84px;
   height: auto;
   color: #fff;
 }
 
-h1 {
+h2 {
+  font-size: 48px;
   padding: 20px;
   border: 1px solid #333;
   border-radius: 5em;
-  line-height: 2em;
-  background: #2adfd6;
-  opacity: 0.5;
+  line-height: 1.4em;
+  background: #7ff0ea;
+  opacity: 0.8;
 }

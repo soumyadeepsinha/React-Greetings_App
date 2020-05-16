@@ -5,12 +5,16 @@ function App() {
   let name = "Chris";
 
   // creating a date variable
-  let curDate = new Date();
+  let curHours = new Date();
   let curTime = new Date();
-
   // storing current hours
-  curDate = curDate.getHours();
+  curHours = curHours.getHours();
   curTime = curTime.getMinutes();
+
+  let AmOrPm = curHours >= 12 ? 'pm' : 'am';
+  curHours = (curHours % 12) || 12;
+
+  let finalTime = "Time : " + curHours + ":" + curTime + " " + AmOrPm;
 
   // creating a greetigs variable
   let greetings = {};
@@ -18,27 +22,27 @@ function App() {
   // creating a inline-css variable
   const cssstyle = {};
 
-  if (curDate >= 5 && curDate <= 11) {
+  if (curHours >= 5 && curHours <= 11) {
     greetings = "Good Morning";
     cssstyle.color = "green";
-  } else if (curDate >= 12 && curDate <= 17) {
+  } else if (curHours >= 12 && curHours <= 17) {
     greetings = "Good Afternoon";
     cssstyle.color = "orange";
-  } else if (curDate >= 18 && curDate <= 21) {
+  } else if (curHours >= 18 && curHours <= 21) {
     greetings = "Good Evening";
-    cssstyle.color = "grey";
+    cssstyle.color = "white";
   } else {
     greetings = "Good Night";
     cssstyle.color = "black";
   }
   return (
     <div className="container">
-      <h2 className="clock">
-        Current Time is {curDate}:{curTime}
-      </h2>
-      <h1>
-        <span style={cssstyle}> {greetings}, </span> {name}
+      <h1 className="clock">
+        {finalTime}
       </h1>
+      <h2>
+        <span style={cssstyle}> {greetings}, </span> {name}
+      </h2>
     </div>
   );
 }
