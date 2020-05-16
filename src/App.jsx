@@ -6,15 +6,15 @@ function App() {
 
   // creating a date variable
   let curHours = new Date();
-  let curTime = new Date();
+  let curMin = new Date();
   // storing current hours
   curHours = curHours.getHours();
-  curTime = curTime.getMinutes();
+  curMin = curMin.getMinutes();
 
   let AmOrPm = curHours >= 12 ? 'pm' : 'am';
-  curHours = (curHours % 12) || 12;
+  let CurTime = (curHours % 12) || 12;
 
-  let finalTime = "Time : " + curHours + ":" + curTime + " " + AmOrPm;
+  let finalTime = "Time - " + CurTime + ":" + curMin + " " + AmOrPm;
 
   // creating a greetigs variable
   let greetings = {};
@@ -22,13 +22,13 @@ function App() {
   // creating a inline-css variable
   const cssstyle = {};
 
-  if (curHours >= 5 && curHours <= 11) {
+  if (CurTime >= 4 && CurTime <= 11 && AmOrPm === 'am') {
     greetings = "Good Morning";
     cssstyle.color = "green";
-  } else if (curHours >= 12 && curHours <= 17) {
+  } else if (CurTime >= 12 && CurTime <= 5 && AmOrPm === 'pm') {
     greetings = "Good Afternoon";
     cssstyle.color = "orange";
-  } else if (curHours >= 18 && curHours <= 21) {
+  } else if (CurTime >= 6 && CurTime <= 8 && AmOrPm === 'pm') {
     greetings = "Good Evening";
     cssstyle.color = "white";
   } else {
@@ -36,14 +36,20 @@ function App() {
     cssstyle.color = "black";
   }
   return (
-    <div className="container">
-      <h1 className="clock">
-        {finalTime}
-      </h1>
-      <h2>
-        <span style={cssstyle}> {greetings}, </span> {name}
-      </h2>
-    </div>
+    <>
+      <div className="search">
+        <div className="gcse-searchbox-only" data-resultsUrl="https://googlecustomsearch.appspot.com/elementv2/two-page_results_elements_v2.html?query=test"></div>
+        <script async src="https://cse.google.com/cse.js?cx=000888210889775888983:pqb3ch1ewhg"></script>
+      </div>
+      <div className="container">
+        <h1 className="clock">
+          {finalTime}
+        </h1>
+        <h2>
+          <span style={cssstyle}> {greetings}, </span> {name}
+        </h2>
+      </div>
+    </>
   );
 }
 
