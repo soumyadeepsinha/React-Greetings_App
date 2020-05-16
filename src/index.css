@@ -25,11 +25,12 @@ body {
 }
 
 h2 {
+  margin-top: -50px;
   font-size: 48px;
   padding: 20px;
   border: 1px solid #333;
   border-radius: 5em;
-  line-height: 1.4em;
+  line-height: 1em;
   background: #7ff0ea;
   opacity: 0.8;
 }
