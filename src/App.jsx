@@ -22,13 +22,13 @@ function App() {
   // creating a inline-css variable
   const cssstyle = {};
 
-  if (CurTime >= 4 && CurTime <= 11 && AmOrPm === 'am') {
+  if (CurTime >= 4 && CurTime <= '11:59' && AmOrPm === 'am') {
     greetings = "Good Morning";
     cssstyle.color = "green";
-  } else if (CurTime >= 12 && CurTime <= 5 && AmOrPm === 'pm') {
+  } else if (CurTime >= 12 && CurTime <= '5:59' && AmOrPm === 'pm') {
     greetings = "Good Afternoon";
     cssstyle.color = "orange";
-  } else if (CurTime >= 6 && CurTime <= 8 && AmOrPm === 'pm') {
+  } else if (CurTime >= 6 && CurTime <= 7 && curMin <= 59 && AmOrPm === 'pm') {
     greetings = "Good Evening";
     cssstyle.color = "white";
   } else {
