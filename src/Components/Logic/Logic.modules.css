@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.made_by {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
