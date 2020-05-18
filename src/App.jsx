@@ -37,7 +37,7 @@ function App() {
     cssstyle.color = "black";
   }
   return (
-    <>
+    <React.Fragment>
       <div className="container">
         <Logic />
         <h1 className="clock">{finalTime}</h1>
@@ -45,7 +45,7 @@ function App() {
           <span style={cssstyle}> {greetings}, </span> {name}
         </h2>
       </div>
-    </>
+    </React.Fragment>
   );
 }
 
