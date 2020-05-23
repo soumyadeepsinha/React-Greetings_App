@@ -3,10 +3,11 @@ import Logic from "./Components/Logic/Logic";
 import './index.css'
 
 function App() {
+  // store current time
   let newTime = "Time - " + new Date().toLocaleTimeString()
-
+  // current value, updated value, iinitial value
   const [curTime, SetCurTime] = useState(newTime)
-
+  // update function 
   const UpdatedTime = () => {
     newTime = "Time - " + new Date().toLocaleTimeString()
     SetCurTime(newTime)
