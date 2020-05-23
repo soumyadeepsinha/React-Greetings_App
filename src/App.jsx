@@ -1,21 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Logic from "./Components/Logic/Logic";
+import './index.css'
 
 function App() {
+  let newTime = "Time - " + new Date().toLocaleTimeString()
+
+  const [curTime, SetCurTime] = useState(newTime)
+
+  const UpdatedTime = () => {
+    newTime = "Time : " + new Date().toLocaleTimeString()
+    SetCurTime(newTime)
+  }
+
   // creating a name variable
   let name = "Chris";
-
   // creating a date variable
   let curHours = new Date();
-  let curMin = new Date();
   // storing current hours
   curHours = curHours.getHours();
-  curMin = curMin.getMinutes();
-
-  let AmOrPm = curHours >= 12 ? "pm" : "am";
-  let curTime = curHours % 12 || 12;
-
-  let finalTime = "Time - " + curTime + ":" + curMin + " " + AmOrPm;
 
   // creating a greetigs variable
   let greetings = {};
@@ -40,10 +42,11 @@ function App() {
     <React.Fragment>
       <div className="container">
         <Logic />
-        <h1 className="clock">{finalTime}</h1>
+        <h1 className="clock">{curTime}</h1>
         <h2>
           <span style={cssstyle}> {greetings}, </span> {name}
         </h2>
+        <button onClick={UpdatedTime}>Update</button>
       </div>
     </React.Fragment>
   );
