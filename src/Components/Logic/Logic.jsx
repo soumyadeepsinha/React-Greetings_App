@@ -7,7 +7,7 @@ export default class Logic extends Component {
       <React.Fragment>
         <div>
           <h1>Welcome to React App...</h1>
-          <p className="made_by">Made by Soumyadeep Sinha</p>
+          <p className="made_by">Made by Soumaydeep Sinha :sunglasses: </p>
         </div>
       </React.Fragment>
     )
