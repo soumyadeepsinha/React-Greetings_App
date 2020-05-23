@@ -8,7 +8,7 @@ function App() {
   const [curTime, SetCurTime] = useState(newTime)
 
   const UpdatedTime = () => {
-    newTime = "Time : " + new Date().toLocaleTimeString()
+    newTime = "Time - " + new Date().toLocaleTimeString()
     SetCurTime(newTime)
   }
 
@@ -46,7 +46,7 @@ function App() {
         <h2>
           <span style={cssstyle}> {greetings}, </span> {name}
         </h2>
-        <button onClick={UpdatedTime}>Update</button>
+        <button onClick={UpdatedTime}>Update Time</button>
       </div>
     </React.Fragment>
   );
