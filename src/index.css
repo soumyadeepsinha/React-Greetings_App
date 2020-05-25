@@ -1,9 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("./images/bg2.jpg");
@@ -36,6 +34,22 @@ h2 {
   line-height: 1em;
   background: #60ddc2;
   opacity: 0.8;
+}
+
+input {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  width: 30%;
+  outline: none;
+  padding: 10 15px;
+  opacity: 0.8;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #60ddc2;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 button {

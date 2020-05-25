@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Logic from "./Components/Logic/Logic";
+import React, { useState } from 'react'
+import Logic from './Components/Logic/Logic'
 import './index.css'
 
 function App() {
@@ -9,18 +9,26 @@ function App() {
   // current value, updated value, iinitial value
   const [curTime, SetCurTime] = useState(newTime)
 
+  // creating a name variable
+  const [name, setname] = useState("")
+
+  const [fullName, setfullName] = useState('')
+
   // update function 
   const UpdatedTime = () => {
     newTime = "Time - " + new Date().toLocaleTimeString()
     SetCurTime(newTime)
+    setfullName(name)
   }
 
-  // creating a name variable
-  let name = "Chris";
+  const inputEvent = (event) => {
+    setname(event.target.value)
+  }
+
   // creating a date variable
-  let curHours = new Date();
+  let curHours = new Date()
   // storing current hours
-  curHours = curHours.getHours();
+  curHours = curHours.getHours()
 
   // creating a greetigs variable
   let greetings = {};
@@ -29,17 +37,17 @@ function App() {
   const cssstyle = {};
 
   if (curHours >= 4 && curHours <= 11) {
-    greetings = "Good Morning";
-    cssstyle.color = "green";
+    greetings = "Good Morning"
+    cssstyle.color = "green"
   } else if (curHours >= 12 && curHours <= 17) {
-    greetings = "Good Afternoon";
-    cssstyle.color = "orange";
+    greetings = "Good Afternoon"
+    cssstyle.color = "orange"
   } else if (curHours >= 18 && curHours <= 19) {
-    greetings = "Good Evening";
-    cssstyle.color = "white";
+    greetings = "Good Evening"
+    cssstyle.color = "white"
   } else {
-    greetings = "Good Night";
-    cssstyle.color = "black";
+    greetings = "Good Night"
+    cssstyle.color = "black"
   }
   return (
     <React.Fragment>
@@ -47,12 +55,13 @@ function App() {
         <Logic />
         <h1 className="clock">{curTime}</h1>
         <h2>
-          <span style={cssstyle}> {greetings}, </span> {name}
+          <span style={cssstyle}> {greetings}, </span> {fullName}
         </h2>
+        <input type="text" placeholder="Enter Your Name" onChange={inputEvent} value={name} />
         <button onClick={UpdatedTime}>Update Time</button>
       </div>
     </React.Fragment>
   );
 }
 
-export default App;
+export default App
