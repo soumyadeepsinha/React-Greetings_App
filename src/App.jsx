@@ -9,9 +9,10 @@ function App() {
   // current value, updated value, iinitial value
   const [curTime, SetCurTime] = useState(newTime)
 
-  // creating a name variable
-  const [name, setname] = useState("")
+  // current name, updated name, updated name, initial name
+  const [name, setname] = useState('')
 
+  // current username, updated username, initial username
   const [fullName, setfullName] = useState('')
 
   // update function 
