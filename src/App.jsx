@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import Logic from './Components/Logic/Logic'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import Header from './Components/Header/Header'
+import Navbar from './Components/Navbar/Navbar'
 import './index.css'
 
 function App() {
@@ -52,15 +54,18 @@ function App() {
   }
   return (
     <React.Fragment>
-      <div className="container">
-        <Logic />
-        <h1 className="clock">{curTime}</h1>
-        <h2>
-          <span style={cssstyle}> {greetings}, </span> {fullName}
-        </h2>
-        <input type="text" placeholder="Enter Your Name" onChange={inputEvent} value={name} />
-        <button onClick={UpdatedTime}>Update Time</button>
-      </div>
+      <MuiThemeProvider>
+        <div className="container">
+          <Navbar />
+          <Header />
+          <h1 className="clock">{curTime}</h1>
+          <h2>
+            <span style={cssstyle}> {greetings}, </span> {fullName}
+          </h2>
+          <input type="text" placeholder="Enter Your Name" onChange={inputEvent} value={name} />
+          <button onClick={UpdatedTime}>Update Time</button>
+        </div>
+      </MuiThemeProvider>
     </React.Fragment>
   );
 }

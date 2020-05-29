@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './Logic.modules.css';
+import './Header.modules.css';
 
-export default class Logic extends Component {
+export default class Header extends Component {
   render() {
     return (
       <React.Fragment>
