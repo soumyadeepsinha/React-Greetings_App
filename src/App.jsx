@@ -11,22 +11,15 @@ function App() {
   // current value, updated value, iinitial value
   const [curTime, SetCurTime] = useState(newTime)
 
-  // current name, updated name, updated name, initial name
-  const [name, setname] = useState('')
-
-  // current username, updated username, initial username
-  const [fullName, setfullName] = useState('')
+  // creating a name variable
+  const Name = 'Jhon'
 
   // update function 
   const UpdatedTime = () => {
     newTime = "Time - " + new Date().toLocaleTimeString()
     SetCurTime(newTime)
-    setfullName(name)
   }
 
-  const inputEvent = (event) => {
-    setname(event.target.value)
-  }
 
   // creating a date variable
   let curHours = new Date()
@@ -60,9 +53,8 @@ function App() {
           <Header />
           <h1 className="clock">{curTime}</h1>
           <h2>
-            <span style={cssstyle}> {greetings}, </span> {fullName}
+            <span style={cssstyle}> {greetings}, </span> {Name}
           </h2>
-          <input type="text" placeholder="Enter Your Name" onChange={inputEvent} value={name} />
           <button onClick={UpdatedTime}>Update Time</button>
         </div>
       </MuiThemeProvider>
