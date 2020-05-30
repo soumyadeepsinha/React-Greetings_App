@@ -11,15 +11,11 @@ function App() {
   // current value, updated value, iinitial value
   const [curTime, SetCurTime] = useState(newTime)
 
-  // creating a name variable
-  const Name = 'Jhon'
-
   // update function 
   const UpdatedTime = () => {
     newTime = "Time - " + new Date().toLocaleTimeString()
     SetCurTime(newTime)
   }
-
 
   // creating a date variable
   let curHours = new Date()
@@ -45,6 +41,9 @@ function App() {
     greetings = "Good Night"
     cssstyle.color = "black"
   }
+  // creating a name variable
+  const Name = `Chris`
+
   return (
     <React.Fragment>
       <MuiThemeProvider>
@@ -53,7 +52,7 @@ function App() {
           <Header />
           <h1 className="clock">{curTime}</h1>
           <h2>
-            <span style={cssstyle}> {greetings}, </span> {Name}
+            <span style={cssstyle}> {greetings}</span> {Name}
           </h2>
           <button onClick={UpdatedTime}>Update Time</button>
         </div>

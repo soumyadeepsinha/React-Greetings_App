@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Header.modules.css';
 
-export default class Header extends Component {
+export default class Header extends React.Component {
   render() {
     return (
       <React.Fragment>
         <div className="made_by">
-          <h1>Welcome to React App...</h1>
-          <p>Made by Soumaydeep Sinha </p>
+          <h1>Welcome to Momentium React App</h1>
         </div>
       </React.Fragment>
     )
